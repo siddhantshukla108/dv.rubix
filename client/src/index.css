@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  font-family: "Inter Tight", sans-serif;
+  background: radial-gradient(circle at top, rgba(61, 209, 201, 0.15), transparent 55%),
+    linear-gradient(120deg, rgba(255, 138, 91, 0.15), transparent 60%), #0b0f1a;
+}
+
+body.theme-light {
+  background: radial-gradient(circle at top, rgba(61, 209, 201, 0.12), transparent 55%),
+    linear-gradient(120deg, rgba(255, 138, 91, 0.12), transparent 60%), #f6f7fb;
+  color: #0b0f1a;
+}
+
+body.theme-light .glass {
+  background: rgba(10, 12, 20, 0.04);
+  border-color: rgba(10, 12, 20, 0.08);
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+}
+
+.section {
+  @apply mx-auto max-w-6xl py-12;
+}
+
+.btn {
+  @apply inline-flex items-center justify-center rounded-full px-5 py-2 text-sm font-semibold transition;
+}
+
+.btn-primary {
+  @apply bg-accent text-ink shadow-glow hover:translate-y-[-1px] hover:shadow-xl;
+}
+
+.btn-secondary {
+  @apply border border-white/20 text-white hover:border-white/60;
+}
