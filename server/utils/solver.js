@@ -1,7 +1,6 @@
+
 const Cube = require("cubejs");
 const { validateCubeString } = require("./validateCube");
-
-Cube.initSolver();
 
 function solveCube(state) {
   const validation = validateCubeString(state);
